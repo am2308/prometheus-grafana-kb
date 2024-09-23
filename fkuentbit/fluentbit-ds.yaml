@@ -95,7 +95,7 @@ spec:
           path: /var/lib/docker/containers
       - name: fluent-bit-config
         configMap:
-          name: fluent-bit-config
+          name: fluent-bit
       serviceAccountName: fluentd-es
       tolerations:
       - key: node-role.kubernetes.io/master
