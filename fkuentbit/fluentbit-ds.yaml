@@ -83,8 +83,8 @@ spec:
         - name: varlibdockercontainers
           mountPath: /var/lib/docker/containers
           readOnly: true
-        - name: fluent-bit-config
-          mountPath: /fluent-bit/etc/
+#        - name: fluent-bit-config
+#          mountPath: /fluent-bit/etc/
       terminationGracePeriodSeconds: 10
       volumes:
       - name: varlog
