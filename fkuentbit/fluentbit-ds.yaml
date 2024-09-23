@@ -93,9 +93,9 @@ spec:
       - name: varlibdockercontainers
         hostPath:
           path: /var/lib/docker/containers
-      - name: fluent-bit-config
-        configMap:
-          name: fluent-bit
+#      - name: fluent-bit-config
+#        configMap:
+#          name: fluent-bit
       serviceAccountName: fluentd-es
       tolerations:
       - key: node-role.kubernetes.io/master
