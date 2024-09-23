@@ -46,7 +46,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: fluent-bit
-  namespace: logging
+  namespace: efklog
   labels:
     k8s-app: fluent-bit-logging
     version: v1
