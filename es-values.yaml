@@ -1,0 +1,22 @@
+# elasticsearch-values.yaml
+replicas: 1  # Single-node cluster to conserve resources on kind
+
+# Minimal resource requests for kind
+resources:
+  requests:
+    memory: "512Mi"
+    cpu: "500m"
+  limits:
+    memory: "1Gi"
+    cpu: "1"
+
+# Disable persistence for kind since local storage is ephemeral
+persistence:
+  enabled: false
+
+# Minimal JVM heap size for kind environment
+esJavaOpts: "-Xms512m -Xmx512m"
+
+# Set to ClusterIP to avoid LoadBalancer on kind
+service:
+  type: ClusterIP
